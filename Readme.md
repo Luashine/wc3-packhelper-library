@@ -13,6 +13,9 @@ This is required for synchronized vertical scrolling to work (Notepad++ when vie
 ## Usage example
 
 ```lua
+require("lib/wc3-read")
+local file = assert(io.open("some.w3i", "rb"))
+
 function parseW3i(file)
     assert(file)
     local w3i = {}
@@ -41,4 +44,6 @@ function parseW3i(file)
 
     return w3i
 end
+
+parsed_w3i = parseW3i(file)
 ```
